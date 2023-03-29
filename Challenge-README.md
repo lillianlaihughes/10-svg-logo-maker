@@ -15,6 +15,9 @@ Refer to the [Video Submission Guide](https://coding-boot-camp.github.io/full-st
 AS a freelance web developer
 I WANT to generate a simple logo for my projects
 SO THAT I don't have to pay a graphic designer
+OH WAIT LEMME FIX THAT FOR YOU. WHAT I ACTUALLY MEAN IS...
+SO THAT I don't have to hire a graphic designer yet in this early stage of my project
+AND I can quickly create a simple logo I can use as a placeholder image while I continue coding
 ```
 
 ## Acceptance Criteria
