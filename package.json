@@ -1,20 +1,9 @@
 {
-  "name": "TESTLILLIAN",
-  "version": "1.0.0",
-  "description": "",
-  "main": "shapes.js",
-  "directories": {
-    "test": "tests"
-  },
-  "scripts": {
-    "test": "jest"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  // this was created when npm i etc
   "dependencies": {
-    "inquirer": "^9.1.5",
-    "jest": "^29.5.0"
+    "inquirer": "^8.2.4",
+    "inquirer-maxlength-input-prompt": "^1.0.2"
+  },
+  "devDependencies": {
+    "jest": "^28.1.3"
   }
 }
