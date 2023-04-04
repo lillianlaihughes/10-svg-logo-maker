@@ -2,7 +2,10 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-const shapes = require('./lib/shapes')
+const Shapes = require('./lib/shapes')
+const Circle = require('./lib/circle')
+const Square = require('./lib/square')
+const Triangle = require('./lib/triangle')
 
 const maxLength = require('inquirer-maxlength-input-prompt');
 const { connected } = require('process');
@@ -21,18 +24,18 @@ const questions = [
     {
         type: 'input',
         name: 'colorText',
-        message: 'Enter a text color (keyword or hex #).',
+        message: 'Enter a text color (keyword or hex #)',
     },
     {
         type: 'list',
         name: 'shape',
-        message: 'Choose a shape.',
+        message: 'Choose a shape',
         choices: ['circle', 'triangle', 'square']
     },
     {
         type: 'input',
         name: 'colorShape',
-        message: 'Enter a shape color (ideally a different color than the one you entered above!).',
+        message: 'Enter a shape color (ideally a different color than the color you entered above!)',
     }
 ];
 
