@@ -1,21 +1,26 @@
-// TODO: Include packages needed for this application
+// packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const maxLength = require('inquirer-maxlength-input-prompt')
+
+const shapes = require('./lib/shapes')
+
+const maxLength = require('inquirer-maxlength-input-prompt');
+const { connected } = require('process');
+const { BlockList } = require('net');
 
 inquirer.registerPrompt('maxlength-input', maxLength)
 
-// TODO: Create an array of questions for user input
+// array of questions for user input
 const questions = [
     {
         type: 'maxlength-input',
-        name: 'characters',
+        name: 'text',
         message: 'Enter up to 3 characters',
         maxLength: 3
     },
     {
         type: 'input',
-        name: 'color-chara',
+        name: 'colorText',
         message: 'Enter a text color (keyword or hex #).',
     },
     {
@@ -26,18 +31,33 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'color-shape',
+        name: 'colorShape',
         message: 'Enter a shape color (ideally a different color than the one you entered above!).',
     }
 ];
 
-// TODO: Create a function to initialize app
+// function to initialize app
 function init() {
     inquirer
     .prompt(questions)
-    .then((answers) => {
-        console.log('Generated logo.svg') 
-    })
-}
+    .then(({ text, colorText, shape, colorShape }) => {
+        let newShape;
+        // use switch to go through shape options
+        switch (shape) {
+            case 'circle':
+                newShape = new Circle(text, colorText, colorShape);
+                break;
+            case 'square':
+                newShape = new Square(text, colorText, colorShape);
+                break;
+            case 'triangle':
+                newShape = new Triangle(text, colorText, colorShape);
+                break;
+        }
+        fs.writeFile('./examples/logo.svg', newShape.render(text, colorText, colorShape));
+        console.log('Generated logo.svg');
+        });
+    };
+
 // Function call to initialize app
 init();
