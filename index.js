@@ -30,7 +30,7 @@ const questions = [
         type: 'list',
         name: 'shape',
         message: 'Choose a shape',
-        choices: ['circle', 'triangle', 'square']
+        choices: ['circle', 'square', 'triangle']
     },
     {
         type: 'input',
@@ -59,6 +59,7 @@ function init() {
         }
         // fs.writeFile('./examples/logo.svg', newShape.render(text, colorText, colorShape));
         // console.log('Generated logo.svg');
+        // NOTE TO SELF: Was missing (err) callback before TA help. need to review fs docs.
         fs.writeFile('./examples/logo.svg', newShape.render(text, colorText, colorShape), (err) =>
       err ? console.log(err) : console.log('Successfully created logo.svg!')
     );

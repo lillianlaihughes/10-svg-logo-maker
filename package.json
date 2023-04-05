@@ -3,6 +3,9 @@
     "inquirer": "^8.2.4",
     "inquirer-maxlength-input-prompt": "^1.0.2"
   },
+  "scripts": {
+    "test": "jest"
+  },
   "devDependencies": {
     "jest": "^28.1.3"
   }
