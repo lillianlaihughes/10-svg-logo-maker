@@ -57,8 +57,11 @@ function init() {
                 newShape = new Triangle(text, colorText, colorShape);
                 break;
         }
-        fs.writeFile('./examples/logo.svg', newShape.render(text, colorText, colorShape));
-        console.log('Generated logo.svg');
+        // fs.writeFile('./examples/logo.svg', newShape.render(text, colorText, colorShape));
+        // console.log('Generated logo.svg');
+        fs.writeFile('./examples/logo.svg', newShape.render(text, colorText, colorShape), (err) =>
+      err ? console.log(err) : console.log('Successfully created logo.svg!')
+    );
         });
     };
 
