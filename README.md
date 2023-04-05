@@ -51,8 +51,8 @@ THEN I am shown a 300x200 pixel image that matches the criteria I entered
 
 You are required to submit the following for review:
 
-* A walkthrough video that demonstrates the functionality of the application and passing tests:
+* A walkthrough video that demonstrates the functionality of the application and passing tests: https://watch.screencastify.com/v/Q19P1SNdwY6bTqR8WN7T
 
-* At least one sample SVG file generated using your application:
+* At least one sample SVG file generated using your application: /Users/lillian/bootcamp/10-svg-logo-maker/examples/logo.svg
 
-* The URL of the GitHub repository, with a unique name and a README describing the project:
+* The URL of the GitHub repository, with a unique name and a README describing the project: https://github.com/lillianlaihughes/10-svg-logo-maker
